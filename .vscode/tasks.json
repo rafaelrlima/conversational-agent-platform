@@ -1,0 +1,33 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CAP Backend",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; uvicorn main:app --reload",
+      "options": {
+        "cwd": "${workspaceFolder}/backend"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "group": "backend",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "CAP Frontend",
+      "type": "shell",
+      "command": "npm start",
+      "options": {
+        "cwd": "${workspaceFolder}/frontend/cap-frontend"
+      },
+      "presentation": {
+        "panel": "dedicated",
+        "group": "frontend",
+        "reveal": "always"
+      },
+      "problemMatcher": []
+    }
+  ]
+}
