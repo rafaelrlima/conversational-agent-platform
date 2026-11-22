@@ -170,4 +170,6 @@ Rafael Ribeiro de Lima
 
 Senior Data Scientist | AI & Machine Learning | Model Governance | Researcher
 
+Linkedin: https://www.linkedin.com/in/rafarlima/
+
 ---
