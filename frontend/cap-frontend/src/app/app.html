@@ -1,0 +1,25 @@
+<div class="container">
+
+  <h1>
+    Conversational Agent Platform
+  </h1>
+
+  <textarea
+    [(ngModel)]="message"
+    rows="5"
+    placeholder="Type your message">
+  </textarea>
+
+  <br>
+
+  <button (click)="send()">
+    Send
+  </button>
+
+  <h3>Response</h3>
+
+  <div class="response">
+    {{ response }}
+  </div>
+
+</div>
