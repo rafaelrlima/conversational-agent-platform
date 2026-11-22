@@ -4,62 +4,71 @@
 
 ## Vision
 
-The Conversational Agent Platform (CAP) is an Enterprise AI & Decision Intelligence Platform designed to combine Artificial Intelligence, Analytics, Governance, Risk Management, and Knowledge Management into a single intelligent ecosystem.
+The Conversational Agent Platform (CAP) is an Enterprise AI & Decision Intelligence Platform designed to combine Artificial Intelligence, Analytics, Governance, Risk Management, Auditability, and Knowledge Management into a unified ecosystem.
 
-The platform enables users to interact with enterprise data, documents, policies, and business processes through conversational interfaces powered by Generative AI and Agentic AI.
+The platform will allow users to interact with enterprise data, documents, policies, and business processes through conversational interfaces powered by Generative AI and Agentic AI.
 
 The objective is not to build a chatbot.
 
-The objective is to build a governed enterprise AI platform capable of supporting decision-making, improving productivity, reducing risk, increasing transparency, and providing traceability for AI-assisted processes.
+The objective is to build a governed enterprise-grade AI platform capable of supporting decision-making, improving productivity, reducing operational risks, increasing transparency, and providing traceability for AI-assisted business processes.
 
 ---
 
-# Mission
+## Mission
 
-Enable organizations to access knowledge, data, and business insights through governed AI agents that are secure, auditable, and aligned with enterprise standards.
+Enable organizations to access data, knowledge, business insights, and decision support capabilities through secure, governed, auditable, and explainable AI agents.
 
 ---
 
-# Strategic Pillars
+## Strategic Pillars
 
-## Conversational Intelligence
+### Conversational Intelligence
 
-Provide natural language interaction between users and enterprise information.
+Enable natural interactions between users and enterprise systems.
 
-## Analytics Intelligence
+### Analytics Intelligence
 
 Transform business questions into actionable insights using data and analytics.
 
-## Knowledge Intelligence
+### Knowledge Intelligence
 
-Enable intelligent access to organizational knowledge through Retrieval-Augmented Generation (RAG).
+Provide intelligent access to organizational knowledge through Retrieval-Augmented Generation (RAG).
 
-## Governance Intelligence
+### Governance Intelligence
 
-Ensure AI solutions operate within defined governance frameworks and policies.
+Ensure AI operates under predefined policies, controls, and compliance requirements.
 
-## Risk Intelligence
+### Risk Intelligence
 
-Reduce operational, regulatory, and model risks through controls and traceability.
+Identify and reduce AI, operational, and business risks.
 
-## Cost Intelligence
+### Auditability Intelligence
 
-Provide visibility into AI and infrastructure costs to support sustainable adoption.
+Provide complete transparency regarding decisions, prompts, actions, and interactions.
+
+### Cost Intelligence
+
+Provide visibility into infrastructure consumption, model utilization, and AI costs.
 
 ---
 
-# Long-Term Vision
+## Long-Term Vision
 
-Create a production-ready AI Platform capable of supporting:
+The platform should evolve into a production-ready Enterprise AI Platform supporting:
 
 - Conversational AI
-- Data Analytics
 - Database Agents
-- Knowledge Retrieval
+- Retrieval-Augmented Generation (RAG)
 - Multi-Agent Systems
-- Governance Workflows
+- AI Governance
+- Risk Management
 - Human-in-the-Loop Processes
-- Enterprise Observability
+- Cost Management
+- Observability
 - MCP Integrations
 
-The platform should demonstrate how modern organizations can operationalize AI responsibly while maintaining governance, security, compliance, and business alignment.
+---
+
+## Success Criteria
+
+The platform is successful when it demonstrates how AI can be operationalized responsibly within enterprise environments while maintaining governance, security, auditability, and business alignment.

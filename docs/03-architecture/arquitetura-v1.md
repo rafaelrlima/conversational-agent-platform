@@ -1,44 +1,44 @@
 # Architecture V1
 
-# Solution Overview
+## Solution Overview
 
-The Conversational Agent Platform follows a modular architecture designed around scalability, governance, security, and observability.
+The Conversational Agent Platform follows a modular architecture designed around scalability, governance, security, risk management, and observability.
 
-The architecture supports both current requirements and future expansion into Multi-Agent Systems and MCP integrations.
+The architecture supports future expansion into Agentic AI, Multi-Agent Systems, Enterprise Analytics, and MCP integrations.
 
 ---
 
-# Technology Stack
+## Technology Stack
 
-## Frontend
+### Frontend
 
 - Angular
 - TypeScript
 - Angular Material
 
-## Backend
+### Backend
 
 - FastAPI
 - Python
 - Pydantic
 - SQLAlchemy
 
-## AI Layer
+### AI Layer
 
 - Ollama
 - Llama 3.2
 
-## Data Layer
+### Data Layer
 
 - PostgreSQL
 - pgvector (future)
 
-## Infrastructure
+### Infrastructure
 
 - Docker
 - Docker Compose
 
-## Future Components
+### Future Components
 
 - LangGraph
 - MCP
@@ -47,103 +47,77 @@ The architecture supports both current requirements and future expansion into Mu
 
 ---
 
-# High-Level Architecture
+## High-Level Architecture
 
 User
-
 ↓
-
 Angular Frontend
-
 ↓
-
 FastAPI Backend
-
 ↓
-
 Agent Layer
-
 ├── Conversational Agent
-
 ├── Database Agent
-
 ├── RAG Agent
-
 └── Future Specialized Agents
-
 ↓
-
 Tool Layer
-
 ├── Database Access
-
-├── RAG Retrieval
-
+├── Retrieval Engine
 ├── File Access
-
 └── External APIs
-
 ↓
-
 LLM Layer
-
 └── Ollama + Llama 3.2
-
 ↓
-
 Data Layer
-
 ├── PostgreSQL
-
 ├── Vector Database
-
 └── Knowledge Repository
 
 ---
 
-# Cross-Cutting Concerns
+## Cross-Cutting Concerns
 
-The following concerns are present across all platform capabilities and MVPs.
-
-## Governance
+### Governance
 
 - AI Governance
 - Model Governance
 - Prompt Governance
 - Data Governance
 
-## Risk
+### Risk
 
 - AI Risk
 - Operational Risk
 - Compliance Risk
 - Model Risk
 
-## Auditability
+### Auditability
 
 - Audit Trail
-- Prompt History
 - Decision Traceability
+- Prompt History
 - Access Logging
 
-## Cost Management
+### Cost Management
 
-- Model Cost Monitoring
-- Inference Consumption
-- Infrastructure Cost Tracking
+- Token Consumption
+- Compute Utilization
+- Infrastructure Costs
 - Cost Optimization
 
 ---
 
-# Architectural Principles
+## Architectural Principles
 
 1. Security by Design
 2. Governance First
 3. Auditability by Default
-4. Observability First
+4. Risk-Aware Architecture
 5. Cost Awareness
 6. Human-in-the-Loop Support
-7. Modular Design
-8. Cloud Agnostic Architecture
+7. Observability First
+8. Modular Design
 9. Enterprise Scalability
 10. MCP Readiness
