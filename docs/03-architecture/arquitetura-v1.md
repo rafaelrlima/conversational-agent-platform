@@ -1,36 +1,44 @@
 # Architecture V1
 
-## Technology Stack
+# Solution Overview
 
-### Frontend
+The Conversational Agent Platform follows a modular architecture designed around scalability, governance, security, and observability.
+
+The architecture supports both current requirements and future expansion into Multi-Agent Systems and MCP integrations.
+
+---
+
+# Technology Stack
+
+## Frontend
 
 - Angular
 - TypeScript
 - Angular Material
 
-### Backend
+## Backend
 
 - FastAPI
 - Python
 - Pydantic
 - SQLAlchemy
 
-### AI Layer
+## AI Layer
 
 - Ollama
 - Llama 3.2
 
-### Data Layer
+## Data Layer
 
 - PostgreSQL
-- pgvector
+- pgvector (future)
 
-### Infrastructure
+## Infrastructure
 
 - Docker
 - Docker Compose
 
-### Future Components
+## Future Components
 
 - LangGraph
 - MCP
@@ -39,7 +47,7 @@
 
 ---
 
-## High-Level Architecture
+# High-Level Architecture
 
 User
 
@@ -53,7 +61,7 @@ FastAPI Backend
 
 ↓
 
-Coordinator Layer
+Agent Layer
 
 ├── Conversational Agent
 
@@ -67,9 +75,9 @@ Coordinator Layer
 
 Tool Layer
 
-├── Database Connector
+├── Database Access
 
-├── RAG Retrieval Engine
+├── RAG Retrieval
 
 ├── File Access
 
@@ -87,19 +95,55 @@ Data Layer
 
 ├── PostgreSQL
 
-├── pgvector
+├── Vector Database
 
 └── Knowledge Repository
 
 ---
 
-## Architectural Principles
+# Cross-Cutting Concerns
 
-1. Modularity
-2. Scalability
-3. Observability
-4. Security by Design
-5. Governance First
+The following concerns are present across all platform capabilities and MVPs.
+
+## Governance
+
+- AI Governance
+- Model Governance
+- Prompt Governance
+- Data Governance
+
+## Risk
+
+- AI Risk
+- Operational Risk
+- Compliance Risk
+- Model Risk
+
+## Auditability
+
+- Audit Trail
+- Prompt History
+- Decision Traceability
+- Access Logging
+
+## Cost Management
+
+- Model Cost Monitoring
+- Inference Consumption
+- Infrastructure Cost Tracking
+- Cost Optimization
+
+---
+
+# Architectural Principles
+
+1. Security by Design
+2. Governance First
+3. Auditability by Default
+4. Observability First
+5. Cost Awareness
 6. Human-in-the-Loop Support
-7. MCP Readiness
-8. Cloud Agnostic Design
+7. Modular Design
+8. Cloud Agnostic Architecture
+9. Enterprise Scalability
+10. MCP Readiness
