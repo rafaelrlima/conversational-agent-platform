@@ -9,7 +9,9 @@
 
 .chat-window {
 
-  min-height: 400px;
+  height: 500px;
+
+  overflow-y: auto;
 
   border: 1px solid #ddd;
 
@@ -19,7 +21,11 @@
 
   margin-bottom: 20px;
 
-  overflow-y: auto;
+  background-color: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
 }
 
 .message {
@@ -34,11 +40,19 @@
 .user {
 
   background: #e3f2fd;
+
+  align-self: flex-end;
+
+  max-width: 70%;
 }
 
 .assistant {
 
   background: #f5f5f5;
+
+  align-self: flex-start;
+
+  max-width: 70%;
 }
 
 .thinking {

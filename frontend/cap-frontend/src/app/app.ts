@@ -1,7 +1,9 @@
 import {
   Component,
   ChangeDetectorRef,
-  inject
+  inject,
+  ElementRef,
+  ViewChild
 } from '@angular/core';
 
 import { CommonModule } from '@angular/common';
@@ -23,7 +25,11 @@ import { Message } from './models/message.model';
 })
 export class App {
 
+  @ViewChild('chatWindow')
+  chatWindow!: ElementRef;
+
   private chatService = inject(ChatService);
+
   private cdr = inject(ChangeDetectorRef);
 
   message = '';
@@ -50,6 +56,8 @@ export class App {
 
     this.loading = true;
 
+    this.scrollToBottom();
+
     this.chatService
       .sendMessage(question)
       .subscribe({
@@ -65,9 +73,13 @@ export class App {
           this.loading = false;
 
           this.cdr.detectChanges();
+
+          this.scrollToBottom();
         },
 
-        error: () => {
+        error: (error) => {
+
+          console.error(error);
 
           this.messages.push({
             role: 'assistant',
@@ -78,8 +90,22 @@ export class App {
           this.loading = false;
 
           this.cdr.detectChanges();
-        }
 
+          this.scrollToBottom();
+        }
       });
+  }
+
+  private scrollToBottom(): void {
+
+    setTimeout(() => {
+
+      if (this.chatWindow) {
+
+        this.chatWindow.nativeElement.scrollTop =
+          this.chatWindow.nativeElement.scrollHeight;
+      }
+
+    }, 50);
   }
 }
