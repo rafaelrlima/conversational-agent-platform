@@ -3,11 +3,11 @@ from fastapi import APIRouter
 from app.models.chat import ChatRequest
 from app.models.chat import ChatResponse
 
-from app.services.ollama_service import OllamaService
+from app.agents.conversation_agent import ConversationAgent
 
 router = APIRouter()
 
-ollama_service = OllamaService()
+conversation_agent = ConversationAgent()
 
 
 @router.post(
@@ -16,10 +16,10 @@ ollama_service = OllamaService()
 )
 def chat(request: ChatRequest):
 
-    response = ollama_service.ask(
+    response = conversation_agent.chat(
         request.message
     )
-
+    
     return ChatResponse(
         response=response
     )
