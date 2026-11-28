@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 
 import { ChatService } from './chat.service';
 
+import { Message } from './models/message.model';
+
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -26,9 +28,9 @@ export class App {
 
   message = '';
 
-  response = '';
-
   loading = false;
+
+  messages: Message[] = [];
 
   send(): void {
 
@@ -38,6 +40,12 @@ export class App {
 
     const question = this.message;
 
+    this.messages.push({
+      role: 'user',
+      content: question,
+      timestamp: new Date()
+    });
+
     this.message = '';
 
     this.loading = true;
@@ -45,26 +53,33 @@ export class App {
     this.chatService
       .sendMessage(question)
       .subscribe({
+
         next: (result) => {
 
-          this.response = result.response;
+          this.messages.push({
+            role: 'assistant',
+            content: result.response,
+            timestamp: new Date()
+          });
 
           this.loading = false;
 
           this.cdr.detectChanges();
         },
 
-        error: (error) => {
+        error: () => {
 
-          console.error(error);
-
-          this.response =
-            'An error occurred while communicating with the AI model.';
+          this.messages.push({
+            role: 'assistant',
+            content: 'Error communicating with AI.',
+            timestamp: new Date()
+          });
 
           this.loading = false;
 
           this.cdr.detectChanges();
         }
+
       });
   }
 }

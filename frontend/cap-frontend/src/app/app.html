@@ -1,28 +1,53 @@
 <div class="container">
 
-  <h1>Conversational Agent Platform</h1>
+  <h1>
+    Conversational Agent Platform
+  </h1>
+
+  <div class="chat-window">
+
+    @for(message of messages; track $index) {
+
+      <div
+        class="message"
+        [class.user]="message.role === 'user'"
+        [class.assistant]="message.role === 'assistant'">
+
+        <strong>
+
+          {{
+            message.role === 'user'
+              ? 'You'
+              : 'Assistant'
+          }}
+
+        </strong>
+
+        <p>{{ message.content }}</p>
+
+      </div>
+
+    }
+
+    @if (loading) {
+
+      <div class="thinking">
+        🤖 Thinking...
+      </div>
+
+    }
+
+  </div>
 
   <textarea
     [(ngModel)]="message"
     (keydown.enter)="send(); $event.preventDefault()"
-    rows="5"
-    placeholder="Type your message here">
+    rows="4"
+    placeholder="Type your message">
   </textarea>
-
-  <br>
 
   <button (click)="send()">
     Send
   </button>
-
-  <div *ngIf="loading" class="loading">
-    🤖 Thinking...
-  </div>
-
-  <h3>Response</h3>
-
-  <div class="response">
-    {{ response }}
-  </div>
 
 </div>
