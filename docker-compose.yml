@@ -1,20 +1,22 @@
 services:
 
   backend:
-    b*ild:
-      context:*./backend
-    container_name: cap-*ackend
+    build:
+      context: ./backend
+
+    container_name: cap-backend
 
     ports:
-      - "8000:8*00"
+      - "8000:8000"
 
   frontend:
-*   build:
-      context: ./fronten*/cap-frontend
-    container_name: *ap-frontend
+    build:
+      context: ./frontend/cap-frontend
+
+    container_name: cap-frontend
 
     ports:
-      - "4*00:4200"
+      - "4200:4200"
 
     depends_on:
-      -*backend
+      - backend
