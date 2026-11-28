@@ -1,5 +1,5 @@
 from app.services.ollama_service import OllamaService
-
+from prompts.loader import load_prompt
 
 class ConversationAgent:
 
@@ -10,9 +10,8 @@ class ConversationAgent:
         self.messages = [
             {
                 "role": "system",
-                "content": (
-                    "You are an enterprise AI assistant. "
-                    "Be concise, helpful and professional."
+                "content": load_prompt(
+                    "conversational_agent.txt"
                 )
             }
         ]
